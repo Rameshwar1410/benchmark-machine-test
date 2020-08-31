@@ -39,6 +39,8 @@ class StudentController extends REST_Controller
                 REST_Controller::HTTP_EXPECTATION_FAILED
             );
         } else {
+
+            /** All fields are sanitized in REST_Controller */
             $data = $this->input->post(null, true);
             $result = $this->student_model->addStudentInfo($data);
 
@@ -69,7 +71,7 @@ class StudentController extends REST_Controller
      */
     public function student_get()
     {
-        $studentDetail = $this->student_model->getAllMember();
+        $studentDetail = $this->student_model->getAllStudentDetails();
         if (empty($studentDetail)) {
             $this->response(
                 [

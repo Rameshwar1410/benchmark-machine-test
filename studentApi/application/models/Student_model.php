@@ -1,23 +1,17 @@
-<?php if (!defined('BASEPATH')) {
-    exit('No direct script access allowed');
-}
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
- * Class : User_model (Member Model)
- * User model class to get to handle user related data
- * @author : Ramu
- * @version : 1.1
- * @since : 15 November 2016
+ * Class Student_model
  */
-
 class Student_model extends CI_Model
 {
     /**
-     * This function used to get user information by id with role
-     * @param number $userId : This is user id
-     * @return aray $result : This is user information
+     * Get all student required details
+     *
+     * @return array
      */
-    public function getAllMember()
+    public function getAllStudentDetails()
     {
         $this->db->select('id', 'first_name', 'last_name', 'pocket_money');
         $this->db->from('student');
@@ -26,10 +20,13 @@ class Student_model extends CI_Model
         return $query->result();
     }
 
-    /*
-
-    */
-    public function addStudentInfo($data)
+    /**
+     * Add new student
+     * 
+     * @param array $data
+     * @return bool
+     */
+    public function addStudentInfo(array $data): bool
     {
         return $result = $this->db->insert('student', $data);
     }
