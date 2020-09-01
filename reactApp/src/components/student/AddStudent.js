@@ -60,6 +60,7 @@ const AddStudent = () => {
                 placeholder="Enter Your first name"
                 name="first_name"
                 value={user.first_name}
+                maxlength="50"
                 onChange={(e) => onInputChange(e)}
                 required
               />
@@ -75,6 +76,7 @@ const AddStudent = () => {
                 className="form-control"
                 placeholder="Enter Your last name"
                 name="last_name"
+                maxlength="50"
                 value={user.last_name}
                 onChange={(e) => onInputChange(e)}
                 required
@@ -92,6 +94,7 @@ const AddStudent = () => {
                 placeholder="Enter Your E-mail Address"
                 name="email"
                 value={user.email}
+                maxlength="50"
                 onChange={(e) => onInputChange(e)}
                 required
               />
@@ -103,10 +106,12 @@ const AddStudent = () => {
             </label>
             <div className="col-sm-9">
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 placeholder="Enter Your pocket money"
                 name="pocket_money"
+                min="1"
+                step="any"
                 value={user.pocket_money}
                 onChange={(e) => onInputChange(e)}
                 required
@@ -119,11 +124,12 @@ const AddStudent = () => {
             </label>
             <div className="col-sm-9">
               <input
-                type="text"
+                type="password"
                 className="form-control"
                 placeholder="Enter Your password"
                 name="password"
                 value={user.password}
+                maxlength="50"
                 onChange={(e) => onInputChange(e)}
                 required
               />
@@ -135,11 +141,13 @@ const AddStudent = () => {
             </label>
             <div className="col-sm-9">
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 placeholder="Enter Your age"
                 name="age"
                 value={user.age}
+                max="100"
+                min="6"
                 onChange={(e) => onInputChange(e)}
                 required
               />
@@ -156,6 +164,7 @@ const AddStudent = () => {
                 placeholder="Enter Your city"
                 name="city"
                 value={user.city}
+                maxlength="50"
                 onChange={(e) => onInputChange(e)}
                 required
               />
@@ -172,6 +181,7 @@ const AddStudent = () => {
                 placeholder="Enter Your state"
                 name="state"
                 value={user.state}
+                maxlength="50"
                 onChange={(e) => onInputChange(e)}
                 required
               />
@@ -183,11 +193,12 @@ const AddStudent = () => {
             </label>
             <div className="col-sm-9">
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 placeholder="Enter Your zip"
                 name="zip"
                 value={user.zip}
+                maxlength="6"
                 onChange={(e) => onInputChange(e)}
                 required
               />
@@ -204,6 +215,7 @@ const AddStudent = () => {
                 placeholder="Enter Your country"
                 name="country"
                 value={user.country}
+                maxlength="50"
                 onChange={(e) => onInputChange(e)}
                 required
               />
