@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 29, 2020 at 02:52 PM
+-- Generation Time: Sep 02, 2020 at 02:59 PM
 -- Server version: 5.7.31-0ubuntu0.18.04.1
 -- PHP Version: 7.1.33-17+ubuntu18.04.1+deb.sury.org+1
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `student`
+-- Database: `studentApi`
 --
 
 -- --------------------------------------------------------
@@ -37,6 +37,7 @@ CREATE TABLE `student` (
   `city` varchar(50) NOT NULL,
   `zip` int(6) UNSIGNED NOT NULL,
   `state` varchar(50) NOT NULL,
+  `country` varchar(50) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `created_by` int(10) UNSIGNED NOT NULL,

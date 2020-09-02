@@ -11,7 +11,7 @@ class ListStudent extends Component {
 
   componentDidMount() {
     // GET request using fetch with error handling
-    fetch("http://localhost/studentApp/api/getAllStudent")
+    fetch("http://localhost/studentApi/api/getAllStudent")
       .then(async (response) => {
         const studentData = await response.json();
 

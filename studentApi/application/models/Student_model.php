@@ -13,7 +13,7 @@ class Student_model extends CI_Model
      */
     public function getAllStudentDetails()
     {
-        $this->db->select('id', 'first_name', 'last_name', 'pocket_money');
+        $this->db->select('id, first_name, last_name, pocket_money');
         $this->db->from('student');
         $query = $this->db->get();
         
